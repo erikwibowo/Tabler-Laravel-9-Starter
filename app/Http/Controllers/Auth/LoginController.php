@@ -40,10 +40,6 @@ class LoginController extends Controller
     }
 
     protected function authenticated(Request $request, $user){
-        if ($user->hasRole('admin')) {
-            return to_route('dashboard');
-        }
-
-        return to_route('home');
+        return to_route('admin');
     }
 }
