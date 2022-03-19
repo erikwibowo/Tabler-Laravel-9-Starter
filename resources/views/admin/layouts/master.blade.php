@@ -23,8 +23,11 @@
         </div>
         @include('admin.layouts.modal')
         @include('sweetalert::alert')
+        @yield('modal')
         <!-- Tabler Core -->
         <script src="{{ asset('template/admin/dist/js/tabler.min.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <script src="{{ asset('template/admin/dist/js/demo.min.js') }}"></script>
+        @yield('js')
     </body>
 </html>
