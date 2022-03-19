@@ -27,10 +27,10 @@ Auth::routes([
     'confirm'   => false
 ]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->get('/home', [DashboardController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('index');
+    Route::get('/', [DashboardController::class, 'index'])->name('admin');
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::controller(UserController::class)->group(function () {

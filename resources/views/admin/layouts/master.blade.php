@@ -22,6 +22,7 @@
             </div>
         </div>
         @include('admin.layouts.modal')
+        @include('sweetalert::alert')
         <!-- Tabler Core -->
         <script src="{{ asset('template/admin/dist/js/tabler.min.js') }}"></script>
         <script src="{{ asset('template/admin/dist/js/demo.min.js') }}"></script>
