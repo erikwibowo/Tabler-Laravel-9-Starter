@@ -40,6 +40,6 @@ class LoginController extends Controller
     }
 
     protected function authenticated(Request $request, $user){
-        return to_route('admin');
+        return to_route('admin.dashboard');
     }
 }
